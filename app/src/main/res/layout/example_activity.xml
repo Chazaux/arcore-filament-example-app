@@ -6,13 +6,18 @@
     android:layout_height="match_parent"
     android:background="@android:color/black"
     android:keepScreenOn="true"
-    tools:context="com.example.app.aractivity.ArActivity">
+    tools:context="com.artest.egresine.aractivity.ArActivity">
 
     <SurfaceView
         android:id="@+id/surface_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center" />
+
+    <com.artest.egresine.arcore.PlaneDetectionOverlay
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <FrameLayout
         android:id="@+id/hand_motion_container"
@@ -21,7 +26,7 @@
         android:clipChildren="false"
         android:visibility="gone">
 
-        <com.example.app.arcore.HandMotionView
+        <com.artest.egresine.arcore.HandMotionView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:foregroundGravity="center"
